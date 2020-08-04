@@ -1,0 +1,9 @@
+h1 Danh Sách Thành Viên
+      form(action="/users/search" method="get")
+            input(type="text" value=q  name="q")
+            button Tìm Kiếm 
+      ul(style='list-style: none')
+            each user in users
+                  li 
+                        span= user.name
+                        a(href="/users/view/" + user.id ) Xem
